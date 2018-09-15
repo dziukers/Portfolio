@@ -1,7 +1,7 @@
 {
   "name": "neon",
   "version": "0.1.0",
-  "homepage": "https://dziukers.github.io/Portfolio/",
+  "homepage": "https://dziukers.github.io/Portfolio",
   "private": true,
   "dependencies": {
     "howler": "^2.0.15",
