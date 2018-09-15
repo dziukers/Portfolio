@@ -34,7 +34,7 @@ class App extends Component {
     return (
       this.state.isLoading ? 
       <LoadingScreen /> :
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL + '/'}>
         <div className="App">
         <div className='App__fog'></div>
           <Navbar />
