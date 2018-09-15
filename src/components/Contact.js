@@ -1,0 +1,110 @@
+import React from 'react';
+import styled, {keyframes} from 'styled-components';
+import bg from '../Images/bg-dots.png';
+import cv from '../Images/CV-Krystian Dziuk.pdf';
+
+ //keyframes
+const makegray = keyframes`
+    41% {filter:grayscale(0%)}
+    42% {filter:grayscale(100%)}
+    43% {filter:grayscale(0%)}
+    49% {filter:grayscale(0%)}
+    50% {filter:grayscale(100%)}
+    65% {filter:grayscale(100%)}
+    66% {filter:grayscale(0%)}
+  `;
+
+function blink (props) {
+    return keyframes`    
+41% {border:1px solid white;box-shadow: 0 0 15px 2px ${props.color};  }
+42% { border:1px solid gray;box-shadow:none }
+43% { border:1px solid white;box-shadow: 0 0 15px 2px ${props.color} }
+49% { border:1px solid white;box-shadow: 0 0 15px 2px ${props.color}; }
+50% { border:1px solid gray;box-shadow:none }
+65% { border:1px solid gray;box-shadow:none}
+66% { border:1px solid white;box-shadow: 0 0 15px 2px ${props.color}; }
+`};
+
+ // key styles for elements
+const Text = styled.span``;
+const IconsBar = styled.div``;
+
+    // Styled Contact Wrapper with styled nested elements
+const ContactMeWrapper = styled.div`
+margin:1em auto;
+max-width: 1000px;
+font-size: 1.4rem;
+display: flex;
+flex-direction: column;
+color:rgb(160, 160, 160);
+font-family: 'Nunito', sans-serif;
+box-shadow: -3px 3px 6px 5px black;
+border: double 6px rgba(150,150,150,0.8);
+border-radius:10px;
+padding:20px;
+background-image:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(${props => props.bg});
+
+    ${Text} {
+    text-shadow: 0 1px 0 black;
+    white-space:pre-wrap;
+
+        a {
+            text-shadow: none;
+            color:transparent;
+            background: -webkit-linear-gradient(
+            270deg,
+            rgb(201, 201, 201) , rgb(95, 95, 95), ${props => props.color});
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: ${makegray} 5s infinite alternate;  
+        }
+        hr {
+            border:1px solid white;
+            width:80%;
+            height:0;
+            box-shadow: 0 0 15px 2px ${props => props.color};
+            animation: ${props => blink(props)} 5s infinite alternate;
+        }
+    }
+    ${IconsBar} {
+        [class^="icon-"]:before {
+            font-size: 2.5rem;
+            padding:0.5em;
+            text-shadow: none;
+            color:transparent;
+            background: -webkit-linear-gradient(
+            90deg,
+            rgb(201, 201, 201) , rgb(95, 95, 95), ${props => props.color});
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: ${makegray} 5s infinite alternate;
+        }
+    }
+`;
+
+const Contact = () => {
+    return (
+        <ContactMeWrapper color='rgb(255,50,50)' bg={bg}>
+            <Text>{`I am currently open to new opportunities and actively seeking for a position as a Front-end Developer.\nFeel free to reach me out at`} 
+                <a href='mailto:krystian.dziuk10@gmail.com'> krystian.dziuk10@gmail.com</a>.
+                <hr></hr>
+            </Text>
+            <IconsBar>
+                <a href='https://www.linkedin.com/in/krystian-dziuk-749b8615b/' target='_blank'>
+                    <i className='icon-linkedin-1'></i>
+                </a>
+                <a href='https://github.com/dziukers' target='_blank'>
+                    <i className='icon-github-circled'></i>
+                </a>
+                <a href='mailto:krystian.dziuk10@gmail.com' target='_blank'>
+                    <i className='icon-email'></i>
+                </a>
+                <a href={cv} target='_blank'>
+                    <i className='icon-id-card'></i>
+                </a>
+            </IconsBar>
+        </ContactMeWrapper>
+    )
+}
+
+export default Contact;
