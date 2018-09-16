@@ -28,22 +28,31 @@ function blink (props) {
  // key styles for elements
 const Text = styled.span``;
 const IconsBar = styled.div``;
-
+const Icon = styled.a`
+     
+`;
     // Styled Contact Wrapper with styled nested elements
 const ContactMeWrapper = styled.div`
 margin:1em auto;
 max-width: 1000px;
-font-size: 1.4rem;
+font-size: 1.4em;
 display: flex;
 flex-direction: column;
+text-align:center;
+line-height:1.5em;
 color:rgb(160, 160, 160);
 font-family: 'Nunito', sans-serif;
 box-shadow: -3px 3px 6px 5px black;
 border: double 6px rgba(150,150,150,0.8);
 border-radius:10px;
-padding:20px;
+padding:1.5em;
 background-image:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(${props => props.bg});
 
+@media (max-width: 700px) {
+    margin:3em 1em;
+    justify-content:space-between;
+
+  }
     ${Text} {
     text-shadow: 0 1px 0 black;
     white-space:pre-wrap;
@@ -68,7 +77,7 @@ background-image:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(${props 
     }
     ${IconsBar} {
         [class^="icon-"]:before {
-            font-size: 2.5rem;
+            font-size: 1.8em;
             padding:0.5em;
             text-shadow: none;
             color:transparent;
@@ -80,7 +89,15 @@ background-image:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(${props 
             animation: ${makegray} 5s infinite alternate;
         }
     }
+    ${Icon} {
+        &:hover{
+            [class^="icon-"]:before {
+            transform:scale(1.1);
+            }
+        }
+    }
 `;
+
 
 const Contact = () => {
     return (
@@ -90,18 +107,18 @@ const Contact = () => {
                 <hr></hr>
             </Text>
             <IconsBar>
-                <a href='https://www.linkedin.com/in/krystian-dziuk-749b8615b/' target='_blank'>
+                <Icon iconcolor='rgb(255,255,0)' href='https://www.linkedin.com/in/krystian-dziuk-749b8615b/' target='_blank'>
                     <i className='icon-linkedin-1'></i>
-                </a>
-                <a href='https://github.com/dziukers' target='_blank'>
+                </Icon>
+                <Icon href='https://github.com/dziukers' target='_blank'>
                     <i className='icon-github-circled'></i>
-                </a>
-                <a href='mailto:krystian.dziuk10@gmail.com' target='_blank'>
+                </Icon>
+                <Icon href='mailto:krystian.dziuk10@gmail.com' target='_blank'>
                     <i className='icon-email'></i>
-                </a>
-                <a href={cv} target='_blank'>
+                </Icon>
+                <Icon href={cv} target='_blank'>
                     <i className='icon-id-card'></i>
-                </a>
+                </Icon>
             </IconsBar>
         </ContactMeWrapper>
     )

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Howl, Howler} from 'howler';
+import {Howl} from 'howler';
 import '../App.css';
 
 var sound = new Howl({

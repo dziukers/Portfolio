@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import bg from '../Images/bg-dots.png';
 
     //key styles for card elements
-const CardTitle = styled.h1``;
+const CardTitle = styled.h1`
+`;
 const CardImage = styled.img`
 margin:3em 0;
 width:90%;
@@ -11,6 +12,11 @@ height: auto;
 align-self:center;
 opacity:0.5;
 transition: 0.5s ease;
+
+@media (max-width: 700px) {
+    opacity:0.8;
+  }
+
 `;
 const IconsBar = styled.div`
 [class^="icon-"]:before {
@@ -71,19 +77,22 @@ border-bottom-right-radius: 24px;
         
     ${CardTitle} {
 
-        font-size: 16px;
+        font-size: 15px;
         text-transform: uppercase;
         font-family: 'Nunito', sans-serif;
-        font-weight: bold;
         color:transparent;
-        text-shadow: 0 0 20px rgb(${props => props.color});
+        
         border-bottom:double 6px rgba(${props => props.neonColor},.7);
         background: -webkit-linear-gradient(
-        90deg,
-        rgb(230,230,230), rgb(190,190,190)
+        270deg,
+        rgb(210,210,210), rgb(150,150,150),rgb(${props => props.color})
         );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+
+        @media (max-width: 700px) {
+            text-shadow:none;
+  }
     }
 
     ${IconsBar} {
@@ -146,19 +155,17 @@ border-bottom-right-radius: 24px;
 `;
 
 
-class Projects_Card extends Component{
-    constructor(props) {
-        super(props);
-}
+class ProjectsCard extends Component{
+
 
 render () {
     const {children, primaryColor,neonColor, projectImg, technologies, linkPreview, linkCode} = this.props;
     const showIcon = technologies.map((technology, i) => {
         switch (technology) {
-            case 'html' : return <i className='icon-html5' />;
-            case 'css' : return <i className='icon-css3-1' />;
-            case 'js' : return <i className='icon-javascript'/>;
-            case 'react' : return <i className='icon-react' />;
+            case 'html' : return <i key={i} className='icon-html5' />;
+            case 'css' : return <i key={i} className='icon-css3-1' />;
+            case 'js' : return <i key={i} className='icon-javascript'/>;
+            case 'react' : return <i key={i} className='icon-react' />;
             default: return null;
         }});
 
@@ -185,6 +192,6 @@ render () {
     )
 }
 }
-export default Projects_Card;
+export default ProjectsCard;
 
     

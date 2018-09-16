@@ -2,7 +2,6 @@
 .App {
   text-align: center;
   width:100%;
-
 }
 
 .App__fog{
@@ -73,7 +72,6 @@
   position: absolute;
     top: 50%;
     left: 50%;
-    padding: 0 1em 0 1em;
   transform: translate(-50%,-50%);
   height: auto;
   font-family: "neontubes";
@@ -128,7 +126,7 @@ white-space: nowrap;
 
 .aboutMe{
   max-width: 1000px;
-  font-size: 1.4em;
+  font-size: 1.3em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -142,12 +140,12 @@ white-space: nowrap;
   white-space: pre-wrap;
 }
 .aboutMe__info-container {
-  
   width:100%;
 }
 .aboutMe__info-container span {
   display:block;
   text-shadow: 5px 15px 5px rgba(0,0,0,0.30), 5px 10px 5px rgba(0,0,0,0.22);
+  line-height: 1.375em;
 }
 .aboutMe__info-container span a {
   color: rgb(124, 45, 45)
@@ -155,7 +153,7 @@ white-space: nowrap;
 .aboutMe__img {
   float:left;
   opacity:0.5;
-  max-width:25%;
+  max-width:30%;
   z-index:-3;
 }
 .aboutMe__fontello-icons {
@@ -199,9 +197,6 @@ white-space: nowrap;
   font-size: 2em;
 
 }
-
-
-
   @keyframes fog-animation {
     0% {
       transform: translateX(-98vw) translateY(0%);
@@ -234,24 +229,10 @@ white-space: nowrap;
   46% { opacity: 1; }
 }
 
-@media screen and (max-width: 1400px) {
-  body {
-    font-size: 14px;
-  }
-  .logo .hrs {  }
-}
-@media screen and (max-width: 700px) {
-  body {
-    font-size: 8px;
-  }
-  .logo .hrs {  }
-}
-
- .aboutMe__fontello-icons [class^="icon-"]:before{
+.aboutMe__fontello-icons [class^="icon-"]:before{
   font-size: 3.5em;
   color: rgba(120,120,120,0.9);
   text-shadow: 10px 19px 5px rgba(0,0,0,1), 10px 15px 5px rgba(0,0,0,1);
-
 }
 
 .aboutMe__fontello-icons .icon-npm:hover:before {
@@ -267,7 +248,7 @@ white-space: nowrap;
   0 0 500px rgba(203, 56, 55,1),
   0 0 1000px rgba(203, 56, 55,1);
 } /* '' */
-.aboutMe__fontello-icons .icon-css3-1:hover:before,.aboutMe .fontello-icons .icon-css3:hover:before,.aboutMe .fontello-icons .icon-css3-2:hover:before {
+.aboutMe__fontello-icons .icon-css3-1:hover:before,.aboutMe__fontello-icons .icon-css3:hover:before,.aboutMe__fontello-icons .icon-css3-2:hover:before {
   color:white;
   text-shadow:
   0 0 0 transparent,
@@ -332,7 +313,7 @@ white-space: nowrap;
   0 0 500px rgba(51, 153, 51,1),
   0 0 1000px rgba(51, 153, 51,1);
 } /* '' */
-.aboutMe__fontello-icons .icon-html5:hover:before,.aboutMe .fontello-icons .icon-html5-1:hover:before {
+.aboutMe__fontello-icons .icon-html5:hover:before,.aboutMe__fontello-icons .icon-html5-1:hover:before {
   color:white;
   text-shadow:
   0 0 0 transparent,
@@ -358,3 +339,101 @@ white-space: nowrap;
   0 0 500px rgba(21, 114, 182,1),
   0 0 1000px rgba(21, 114, 182,1);
 } /* '' */
+
+@media screen and (max-width: 1400px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  body {
+    font-size: 14px;
+  }
+  .Container {
+    padding-top:10em;
+  }
+  .navigation{
+    position: fixed;
+    width:100%;
+  }
+  .navigation ul {
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding:0;
+  }
+  .navigation ul li{
+    padding:1em;
+  }
+  .aboutMe {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    font-size: 12px;
+  }
+  .Container {
+    padding-top:4em;
+  }
+.logo {
+  font-size: 0.7em;
+}
+  .navigation ul {
+    font-size: 0.65em;
+  }
+  .App__fog{
+    display: none;
+  }
+  .aboutMe__img{
+    float: none;
+    max-width:60%;
+    margin:1em auto;
+    display: block;
+  }
+  .aboutMe {
+    max-width: 90%;
+    line-height: 1.25em;
+  }
+  .aboutMe__fontello-icons{
+    font-size:0.7em;
+    padding:1em 0 1em 0 ;
+  }
+  .aboutMe__fontello-icons [class^="icon-"]:hover:before {
+    text-shadow: initial;
+  }
+  .logo__krystiandziuk {
+    text-shadow:
+      0 0 0 transparent,
+      0 0 10px rgb(255,0,60),
+      0 0 20px rgba(255,0,60,.5),
+      0 0 100px rgba(255,0,60,1),
+      0 0 200px rgba(255,0,60,1)
+
+}
+.logo__text {
+  text-shadow:
+    0 0 0 transparent,
+    0 0 10px rgb(38,149,255),
+    0 0 20px rgba(38,149,255,.5),
+    0 0 100px rgba(38,149,255,1),
+    0 0 200px rgba(38,149,255,1)
+
+}
+.logo__developer {
+  text-shadow:
+  0 0 0 transparent,
+  0 0 10px rgb(38,149,255),
+  0 0 20px rgba(38,149,255,.5),
+  0 0 100px rgba(38,149,255,1),
+  0 0 200px rgba(38,149,255,1)
+
+}
+}
+
+@media screen and (max-width: 350px) {
+  body {
+    font-size: 10px;
+  }
+}

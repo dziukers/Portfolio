@@ -38,11 +38,13 @@ class App extends Component {
         <div className="App">
         <div className='App__fog'></div>
           <Navbar />
+          <div className='Container'>
           <Route exact path='/' component={Home} />
           <Route path='/about' component={About} />
           <Route path='/projects' component={Projects} />
           <Route path='/contact' component={Contact} />
           <Sound />
+        </div>
         </div>
       </BrowserRouter>
     );

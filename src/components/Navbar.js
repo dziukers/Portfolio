@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <nav >
+        <nav>
             <div className='navigation'>
                 <ul>
                     <li><NavLink exact to='/'>Home</NavLink></li>

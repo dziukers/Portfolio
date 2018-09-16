@@ -8,9 +8,9 @@ const About = () => {
 
         <div className='aboutMe'>
             <div className='aboutMe__info-container'>
-                <img src={ImgFace} className='aboutMe__img' />
+                <img src={ImgFace} className='aboutMe__img' alt='portrait on the wall' />
                 <span>{`My name is Krystian and I am looking for a job as a Front-End Developer. Actually, I am still a junior but I learn a lot and gain experience every single day.\nI value creative solutions keeping in mind best UI patterns using new technologies. That's why I find passion in creating staff in React (like this SPA or`} 
-                    <a target='_blank' href='https://dziukers.github.io/Star-Wars-App/'> {`Star Wars App`}</a> {`).`}<p>In the near future I would like to learn about back-end technologies, like express.js and PostgreSQL and also Redux in order to build PWA's (Progressive Web Apps).</p>
+                    <a target='_blank' rel="noopener noreferrer" href='https://dziukers.github.io/Star-Wars-App/'> {`Star Wars App`}</a> {`).`}<p>In the near future I would like to learn about back-end technologies, like express.js and PostgreSQL and also Redux in order to build PWA's (Progressive Web Apps).</p>
                 </span>
             </div>
             <div className='aboutMe__fontello-icons'>
