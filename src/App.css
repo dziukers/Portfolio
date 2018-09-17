@@ -1,12 +1,11 @@
 
 .App {
   text-align: center;
-  width:100%;
 }
 
 .App__fog{
   position:fixed;
-  z-index: 1;
+  z-index: 5;
   opacity:0.4;
   width:200vw;
   height: 100vh;
@@ -19,12 +18,30 @@
   animation: fog-animation 80s linear infinite alternate;
   pointer-events: none;
 }
+  /* page transitions */
+  .page {
+    position:absolute;
+    left:0;
+    top:12em;
+    right:0;
+  }
 
+  .fade-enter, .fade-exit {
+  }
+  .fade-enter.fade-enter-active {
+    z-index: 2;
+    animation: show 300ms linear 600ms both;
+  }
+  .fade-exit.fade-exit-active {
+   
+    animation: hide 600ms linear both;
+  
+  }
 .navigation {
   font-family: "neontubes";
   display: flex;
   justify-content: center;
-  z-index: 2;
+  z-index: 7;
 }
 .navigation ul {
   display:flex;
@@ -65,19 +82,21 @@
   0 0 1000px rgba(29, 167, 10,1);
     font-weight: 600;
     text-transform: uppercase;
-}
+}    
 
+.logo-container {
+height:60vh;
+  display: flex;
+  justify-content: center;
+}
 .logo {
-  display: block;
-  position: absolute;
-    top: 50%;
-    left: 50%;
-  transform: translate(-50%,-50%);
-  height: auto;
+position:absolute;
+top:50%;
+left:50%;
+transform: translate(-50%,-50%);
   font-family: "neontubes";
   text-align: center;
-white-space: nowrap;
-
+  white-space: nowrap;
 }
   .logo__krystiandziuk {
     font-size: 5em;
@@ -92,8 +111,7 @@ white-space: nowrap;
       0 0 100px rgba(255,0,60,1),
       0 0 200px rgba(255,0,60,1),
       0 0 300px rgba(255,0,60,1),
-      0 0 500px rgba(255,0,60,1),
-      0 0 1000px rgba(255,0,60,1);
+      0 0 500px rgba(255,0,60,1);
     animation: blink 4s infinite alternate;
   }
   .logo__text {
@@ -109,8 +127,7 @@ white-space: nowrap;
       0 0 40px rgba(38,149,255,1),
       0 0 100px rgba(38,149,255,1),
       0 0 200px rgba(38,149,255,1),
-      0 0 300px rgba(38,149,255,1),
-      0 0 500px rgba(38,149,255,1);
+      0 0 300px rgba(38,149,255,1);
     animation: buzz 0.01s infinite alternate;
     white-space: normal;
   }
@@ -195,8 +212,9 @@ white-space: nowrap;
 }
 .icon-sound:before {
   font-size: 2em;
-
 }
+
+
   @keyframes fog-animation {
     0% {
       transform: translateX(-98vw) translateY(0%);
@@ -213,11 +231,6 @@ white-space: nowrap;
   33%{content: 'React';}
   66%{content: 'Web'}
 }
-@keyframes fog-move{
-  0% {background-position: -98vw 0 };
-  50% {background-position: 0, 100%};
-  100% {background-position: -98vw 0 };
-}
 @keyframes buzz {
   70% { opacity: 0.80; }
 }
@@ -228,6 +241,18 @@ white-space: nowrap;
   45% { opacity: 0.2; }
   46% { opacity: 1; }
 }
+
+@keyframes show {
+  
+  from {transform:translateY(30px);opacity:0; }
+  to {transform:translateY(0);opacity:1;}
+}
+@keyframes hide {
+  from {transform:translateY(0);opacity:1;}
+		to{transform:translateY(30px);opacity:0; }
+	}
+
+
 
 .aboutMe__fontello-icons [class^="icon-"]:before{
   font-size: 3.5em;
@@ -349,8 +374,8 @@ white-space: nowrap;
   body {
     font-size: 14px;
   }
-  .Container {
-    padding-top:10em;
+  .page {
+    top:10em;
   }
   .navigation{
     position: fixed;
@@ -374,8 +399,11 @@ white-space: nowrap;
   body {
     font-size: 12px;
   }
-  .Container {
-    padding-top:4em;
+  .page {
+    top:5em;
+  }
+  .logo-container {
+    height:70vh;
   }
 .logo {
   font-size: 0.7em;

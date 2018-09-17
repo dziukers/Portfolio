@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import Sound from './components/Sound';
-import Home from './components/Home';
-import About from './components/About';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import Container from './components/Container'
 import Navbar from './components/Navbar';
-import { BrowserRouter, Route } from 'react-router-dom';
-import LoadingScreen from './components/LoadingScreen';
-
-
+import { BrowserRouter} from 'react-router-dom';
+import LoadingScreen from 'react-loading-screen';
 
 class App extends Component {
   constructor(props) {
@@ -20,7 +15,7 @@ class App extends Component {
     this.handleLoad = this.handleLoad.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     window.addEventListener('load', this.handleLoad);
   }
 
@@ -32,21 +27,23 @@ class App extends Component {
 
   render() { 
     return (
-      this.state.isLoading ? 
-      <LoadingScreen /> :
+      <LoadingScreen
+        loading={this.state.isLoading}
+        bgColor='#111111'
+        spinnerColor='rgb(255,0,60)'
+        textColor='#777'
+        logoSrc='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/250px-React-icon.svg.png'
+        text='Just wait for it...'
+      > 
       <BrowserRouter basename={process.env.PUBLIC_URL + '/'}>
         <div className="App">
-        <div className='App__fog'></div>
+          <div className='App__fog'></div>
           <Navbar />
-          <div className='Container'>
-          <Route exact path='/' component={Home} />
-          <Route path='/about' component={About} />
-          <Route path='/projects' component={Projects} />
-          <Route path='/contact' component={Contact} />
+          <Container />
           <Sound />
         </div>
-        </div>
       </BrowserRouter>
+      </LoadingScreen>
     );
   }
 

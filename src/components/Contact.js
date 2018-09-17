@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {Component} from 'react';
 import styled, {keyframes} from 'styled-components';
 import bg from '../Images/bg-dots.png';
 import cv from '../Images/CV-Krystian Dziuk.pdf';
+
 
  //keyframes
 const makegray = keyframes`
@@ -99,11 +100,12 @@ background-image:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(${props 
 `;
 
 
-const Contact = () => {
+class Contact extends Component {
+    render() {
     return (
         <ContactMeWrapper color='rgb(255,50,50)' bg={bg}>
             <Text>{`I am currently open to new opportunities and actively seeking for a position as a Front-end Developer.\nFeel free to reach me out at`} 
-                <a href='mailto:krystian.dziuk10@gmail.com'> krystian.dziuk10@gmail.com</a>.
+                <a href='mailto:krystian.dziuk10@gmail.com'> krystian.dziuk.10@gmail.com</a>.
                 <hr></hr>
             </Text>
             <IconsBar>
@@ -122,6 +124,7 @@ const Contact = () => {
             </IconsBar>
         </ContactMeWrapper>
     )
+}
 }
 
 export default Contact;

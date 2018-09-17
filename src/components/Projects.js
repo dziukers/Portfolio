@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ProjectsCard from './ProjectsCard';
 import styled from 'styled-components';
+
 import starwars from '../Images/starwars-min.jpg';
 import portfolio from '../Images/portfolio-min.jpg';
 import krainaindyka from '../Images/krainaindyka-min.jpg';
@@ -13,9 +14,11 @@ const ProjectsContainer = styled.div`
     justify-content: center;
     flex-wrap:wrap;
 `;
-const Projects = () => {
+class Projects extends Component {
+    render() {
     return (
         <ProjectsContainer>
+
                 <ProjectsCard 
                 id={1} 
                 primaryColor='211, 20, 20'
@@ -76,8 +79,10 @@ const Projects = () => {
                 linkCode ='https://github.com/dziukers/Gradient-Background-Generator'
                 >Gradient Background Generator
                 </ProjectsCard>
+
             </ProjectsContainer>
     )
+    }
 }
 
 export default Projects;

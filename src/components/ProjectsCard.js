@@ -58,7 +58,7 @@ border-bottom-right-radius: 24px;
   max-width: 300px;
   transition: 0.3s ease;
   background-clip: padding-box;
-  z-index:1;
+  z-index:6;
 
     &:hover ${CardImage}  {
         opacity:0.9;
