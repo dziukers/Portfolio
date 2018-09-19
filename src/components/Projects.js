@@ -14,10 +14,10 @@ const ProjectsContainer = styled.div`
     justify-content: center;
     flex-wrap:wrap;
 `;
-class Projects extends Component {
-    render() {
+const Projects = ({ style }) => {
+    console.log(this.props);
     return (
-        <ProjectsContainer>
+        <ProjectsContainer style={{ ...style}}>
 
                 <ProjectsCard 
                 id={1} 
@@ -83,6 +83,6 @@ class Projects extends Component {
             </ProjectsContainer>
     )
     }
-}
+
 
 export default Projects;

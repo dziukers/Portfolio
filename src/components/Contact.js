@@ -3,8 +3,32 @@ import styled, {keyframes} from 'styled-components';
 import bg from '../Images/bg-dots.png';
 import cv from '../Images/CV-Krystian Dziuk.pdf';
 
+const Contact = ({style}) => {
+    return (
+        <ContactMeWrapper style={{...style}} color='rgb(255,50,50)' bg={bg}>
+            <Text>{`I am currently open to new opportunities and actively seeking for a position as a Front-end Developer.\nFeel free to reach me out at`} 
+                <a href='mailto:krystian.dziuk10@gmail.com'> krystian.dziuk.10@gmail.com</a>.
+                <hr></hr>
+            </Text>
+            <IconsBar>
+                <Icon iconcolor='rgb(255,255,0)' href='https://www.linkedin.com/in/krystian-dziuk-749b8615b/' target='_blank'>
+                    <i className='icon-linkedin-1'></i>
+                </Icon>
+                <Icon href='https://github.com/dziukers' target='_blank'>
+                    <i className='icon-github-circled'></i>
+                </Icon>
+                <Icon href='mailto:krystian.dziuk10@gmail.com' target='_blank'>
+                    <i className='icon-email'></i>
+                </Icon>
+                <Icon href={cv} target='_blank'>
+                    <i className='icon-id-card'></i>
+                </Icon>
+            </IconsBar>
+        </ContactMeWrapper>
+    )
+}
 
- //keyframes
+//keyframes
 const makegray = keyframes`
     41% {filter:grayscale(0%)}
     42% {filter:grayscale(100%)}
@@ -98,33 +122,5 @@ background-image:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(${props 
         }
     }
 `;
-
-
-class Contact extends Component {
-    render() {
-    return (
-        <ContactMeWrapper color='rgb(255,50,50)' bg={bg}>
-            <Text>{`I am currently open to new opportunities and actively seeking for a position as a Front-end Developer.\nFeel free to reach me out at`} 
-                <a href='mailto:krystian.dziuk10@gmail.com'> krystian.dziuk.10@gmail.com</a>.
-                <hr></hr>
-            </Text>
-            <IconsBar>
-                <Icon iconcolor='rgb(255,255,0)' href='https://www.linkedin.com/in/krystian-dziuk-749b8615b/' target='_blank'>
-                    <i className='icon-linkedin-1'></i>
-                </Icon>
-                <Icon href='https://github.com/dziukers' target='_blank'>
-                    <i className='icon-github-circled'></i>
-                </Icon>
-                <Icon href='mailto:krystian.dziuk10@gmail.com' target='_blank'>
-                    <i className='icon-email'></i>
-                </Icon>
-                <Icon href={cv} target='_blank'>
-                    <i className='icon-id-card'></i>
-                </Icon>
-            </IconsBar>
-        </ContactMeWrapper>
-    )
-}
-}
 
 export default Contact;

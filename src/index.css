@@ -11,24 +11,40 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 html,body,#root {
   width:100%;
-  min-height:100vh;
-
-}
-body {
+  height:100%;
   margin: 0;
   padding: 0;
+}
+body {
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   background-image:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(Images/bricks-min.jpg);
   background-size: cover;
   box-sizing: border-box;
-  height:100%;
 }
-
+a{
+  color:grey;
+  text-decoration: none;
+}
+a:visited, a:link {
+  text-decoration: none;
+  text-decoration-style: none;
+}
+@media screen and (max-width: 1400px) {
+  body {
+    font-size: 15px;
+  }
+}
 @media screen and (max-width: 700px) {
   body {
+    font-size: 12px;
   background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(Images/bricks-mobile.jpg);
-  background-size: 250%;
+  background-size: cover;
 }
+}
+@media screen and (max-width: 350px) {
+  body {
+    font-size: 10px;
+  }
 }
 
