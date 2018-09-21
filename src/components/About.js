@@ -2,11 +2,9 @@ import React, {Component} from 'react';
 import '../css/fontello.css';
 import styled from 'styled-components';
 import ImgFace from '../Images/face-min.png';
-import { animated} from 'react-spring'
 
-const About = ({ style }) => {
+const About = () => {
     return (
-      <animated.div style={{...style}}>
         <AboutMeWrapper>
             <AboutMeInfoContainer>
                 <AboutMeImg src={ImgFace} alt='portrait on the wall' />
@@ -23,7 +21,6 @@ const About = ({ style }) => {
                 <i className='icon-node'></i>
             </AboutMeFontelloIcons>
         </AboutMeWrapper>
-        </animated.div>
     )
 }
 
