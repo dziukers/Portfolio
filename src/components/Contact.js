@@ -3,9 +3,9 @@ import styled, {keyframes} from 'styled-components';
 import bg from '../Images/bg-dots.png';
 import cv from '../Images/CV-Krystian Dziuk.pdf';
 
-const Contact = ({style}) => {
+const Contact = () => {
     return (
-        <ContactMeWrapper style={{...style}} color='rgb(255,50,50)' bg={bg}>
+        <ContactMeWrapper color='rgb(255,50,50)' bg={bg}>
             <Text>{`I am currently open to new opportunities and actively seeking for a position as a Front-end Developer.\nFeel free to reach me out at`} 
                 <a href='mailto:krystian.dziuk10@gmail.com'> krystian.dziuk.10@gmail.com</a>.
                 <hr></hr>

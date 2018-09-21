@@ -1,8 +1,7 @@
 import React from "react";
 import { Switch, Route, withRouter } from "react-router-dom";
-import { Transition, config } from 'react-spring'
-import styled from 'styled-components';
-
+import styled, {keyframes} from 'styled-components';
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Home from './Home';
 import About from './About';
 import Projects from './Projects';
@@ -11,26 +10,36 @@ import Contact from './Contact';
 const Container = ({location}) => {
         return (
             <Page>
-            <Transition
-              config={{tension: 50, friction: 10}}
-              keys={location.pathname}
-              from={{transform:'translateY(50px)',opacity: 0, filter:'blur(20px)'}}
-              enter={{transform:'translateY(0px)',opacity: 1,filter:'blur(0px)'}}
-              leave={{transform:'translateY(50px)',opacity: 0,filter:'blur(20px)'}}>
-              {style => (
+              <TransitionGroup>
+                    <CSSTransition
+                    key={location.key}
+                    timeout={900}
+                    classNames='fade'
+                    >
                         <div className={location.pathname === '/projects' ? 'page z-index' : 'page'}>
                         <Switch location={location}>
-                            <Route exact path='/' render={props => Home({ ...props, style })} /> 
-                            <Route path='/about' render={props => About({ ...props, style })} />
-                            <Route path='/projects' render={props => Projects({ ...props, style })} /> 
-                            <Route path='/contact' render={props => Contact({ ...props, style })} /> 
+                            <Route exact path='/' component={Home} /> 
+                            <Route path='/about' component={About} />
+                            <Route path='/projects' component={Projects}/> 
+                            <Route path='/contact' component={Contact} /> 
                         </Switch>
-                    </div>
-              )}
-            </Transition>
+                    </div> 
+              </CSSTransition>
+                </TransitionGroup>
             </Page>
     )
 }
+
+const show = keyframes`
+  
+  from {opacity:0; }
+  to {opacity:1;}
+`;
+
+const hide = keyframes`
+  from {opacity:1;}
+		to{opacity:0;}
+	`;
   const Page = styled.section`
 
     div.page {
@@ -42,6 +51,16 @@ const Container = ({location}) => {
     div.z-index{
     z-index: 3;
     }
+    .fade-enter, .fade-exit {
+  }
+  .fade-enter.fade-enter-active {
+    animation: ${show} 300ms linear 600ms both;
+  }
+  .fade-exit.fade-exit-active {
+   
+    animation: ${hide} 600ms linear both;
+  
+  }
 
     @media screen and (max-width: 1000px) {
       div.page {

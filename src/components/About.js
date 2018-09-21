@@ -2,11 +2,12 @@ import React, {Component} from 'react';
 import '../css/fontello.css';
 import styled from 'styled-components';
 import ImgFace from '../Images/face-min.png';
-
+import { animated} from 'react-spring'
 
 const About = ({ style }) => {
     return (
-        <AboutMeWrapper style={{ ...style}}>
+      <animated.div style={{...style}}>
+        <AboutMeWrapper>
             <AboutMeInfoContainer>
                 <AboutMeImg src={ImgFace} alt='portrait on the wall' />
                 <span>{`My name is Krystian and I am looking for a job as a Front-End Developer. Actually, I am still a junior but I learn a lot and gain experience every single day.\nI value creative solutions keeping in mind best UI patterns using new technologies. That's why I find passion in creating stuff in React (like this SPA or`} 
@@ -22,6 +23,7 @@ const About = ({ style }) => {
                 <i className='icon-node'></i>
             </AboutMeFontelloIcons>
         </AboutMeWrapper>
+        </animated.div>
     )
 }
 

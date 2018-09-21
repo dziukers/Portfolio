@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import styled, { keyframes } from 'styled-components';
 
 
-const Home = ({ style }) => {
+const Home = () => {
         return (
-            <LogoWrapper style={{...style}}>
+            <LogoWrapper>
                 <Logo>
                     <LogoKrystianDziuk>Krystian Dziuk</LogoKrystianDziuk>
                     <LogoTextWrapper>

@@ -14,6 +14,7 @@ html,body,#root {
   height:100%;
   margin: 0;
   padding: 0;
+
 }
 body {
   -webkit-font-smoothing:antialiased;
@@ -22,14 +23,14 @@ body {
   background-size: cover;
   box-sizing: border-box;
 }
-a{
-  color:grey;
+a,
+a:hover,
+a:active,
+a:visited {
   text-decoration: none;
+  color: inherit;
 }
-a:visited, a:link {
-  text-decoration: none;
-  text-decoration-style: none;
-}
+
 @media screen and (max-width: 1400px) {
   body {
     font-size: 15px;

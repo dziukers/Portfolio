@@ -1,13 +1,18 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 import bg from '../Images/bg-dots.png';
-
+import AnimateLoad from './AnimateLoad';
 
 class ProjectsCard extends Component{
-
-
+    state = {didMount: false}
+        componentDidMount(){
+           setTimeout(() => {
+                this.setState({didMount: true})
+            }, 0)
+        }
 render () {
-    const {children, primaryColor,neonColor, projectImg, technologies, linkPreview, linkCode} = this.props;
+    const {didMount} = this.state;
+    const {title, primaryColor,neonColor, projectImg, technologies, linkPreview, linkCode} = this.props;
     const showIcon = technologies.map((technology, i) => {
         switch (technology) {
             case 'html' : return <i key={i} className='icon-html5' />;
@@ -18,8 +23,8 @@ render () {
         }});
 
     return (
-        <Card color={primaryColor} neonColor={neonColor} isDisabled={linkCode} bg={bg} >
-            <CardTitle> {children} </CardTitle>
+        <Card className={`fade-in ${didMount && 'visible'}`} color={primaryColor} neonColor={neonColor} isDisabled={linkCode} bg={bg} >
+            <CardTitle> {title} </CardTitle>
             <LinkButton href={linkPreview} target='_blank'>
                 <CardImage src={projectImg} alt='project image' />
             </LinkButton>
@@ -45,9 +50,10 @@ render () {
     const CardTitle = styled.h1`
     `;
     const CardImage = styled.img`
-    margin:3em 0;
+    padding:3em 0;
     width:90%;
     height: auto;
+    max-height:125px;
     align-self:center;
     opacity:0.5;
     transition: 0.5s ease;
@@ -83,7 +89,6 @@ render () {
         margin:2em;
         padding:1em 0 0 0;
         box-sizing: border-box;
-        position:relative;
         cursor: pointer;
         max-height: 80vh;
         background-color: #333;
@@ -96,7 +101,7 @@ render () {
       transition: 0.3s ease;
       background-clip: padding-box;
       z-index:6;
-    
+
         &:hover ${CardImage}  {
             opacity:0.9;
         }
@@ -192,6 +197,6 @@ render () {
     
 
     
-export default ProjectsCard;
+    export default AnimateLoad(ProjectsCard);
 
     
