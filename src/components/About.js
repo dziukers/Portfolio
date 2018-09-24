@@ -2,13 +2,14 @@ import React, {Component} from 'react';
 import '../css/fontello.css';
 import styled from 'styled-components';
 import ImgFace from '../Images/face-min.png';
+import bg from '../Images/bg-dots.png';
 
 const About = () => {
     return (
         <AboutMeWrapper>
             <AboutMeInfoContainer>
                 <AboutMeImg src={ImgFace} alt='portrait on the wall' />
-                <span>{`My name is Krystian and I am looking for a job as a Front-End Developer. Actually, I am still a junior but I learn a lot and gain experience every single day.\nI value creative solutions keeping in mind best UI patterns using new technologies. That's why I find passion in creating stuff in React (like this SPA or`} 
+                <span>{`My name is Krystian and I am looking for a job as a Front-End Developer. Actually, I learn a lot and gain experience every single day by making my own projects and trying out new solutions.\nI value creative approach keeping in mind best UI patterns using new technologies. That's why I find passion in creating stuff in React (like this SPA or`} 
                     <a target='_blank' rel="noopener noreferrer" href='https://dziukers.github.io/Star-Wars-App/'> {`Star Wars App`}</a> {`).`}<p>In the near future I would like to learn about back-end technologies, like express.js and PostgreSQL and also Redux in order to build PWA's (Progressive Web Apps).</p>
                 </span>
             </AboutMeInfoContainer>
@@ -34,10 +35,10 @@ const AboutMeWrapper = styled.div`
     margin:0 auto;
     color:rgb(160, 160, 160);
     font-family: 'Nunito', sans-serif;
-    text-shadow: 0 1px 3px rgba(49, 49, 49, 0.4), 0 0 20px rgba(48, 48, 48, 0.075);
     min-height: 60vh;
     max-height: 70vh;
     white-space: pre-wrap;
+    
 
     @media screen and (max-width: 1000px) {
     max-width: 90%;
@@ -48,14 +49,14 @@ const AboutMeWrapper = styled.div`
     }
 `;
 const AboutMeInfoContainer = styled.div`
-    width:100%;
+
     span {
     display:block;
-    text-shadow: 5px 15px 5px rgba(0,0,0,0.30), 5px 10px 5px rgba(0,0,0,0.22);
+    text-shadow: 5px 15px 5px rgba(0,0,0,0.90);
     line-height: 1.375em;
     }
     span a {
-    color: rgb(124, 45, 45)
+    color: rgb(100, 45, 45)
     }
     `;
 
