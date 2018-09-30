@@ -21,7 +21,7 @@ const Contact = () => {
                     <i className='icon-email'></i>
                 </Icon>
                 <Icon href={cv} target='_blank'>
-                    <i className='icon-id-card'></i>
+                    <i className='icon-cv'></i>
                 </Icon>
             </IconsBar>
         </ContactMeWrapper>
@@ -112,6 +112,13 @@ background-image:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(${props 
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: ${makegray} 5s infinite alternate;
+        }
+        .icon-cv:before{
+            font-family: 'Nunito', sans-serif;
+            font-weight:bold;
+            padding:0.3em;
+            content:'CV';
+            
         }
     }
     ${Icon} {

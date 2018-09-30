@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import '../css/fontello.css';
 import styled from 'styled-components';
 import ImgFace from '../Images/face-min.png';
-import bg from '../Images/bg-dots.png';
 
 const About = () => {
     return (

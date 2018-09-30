@@ -14,7 +14,8 @@ import bggenerator from '../Images/bggenerator-min.jpg';
         technologies: ['html','css','js', 'react'],
         linkPreview: 'https://dziukers.github.io/Star-Wars-App/',
         linkCode : 'https://github.com/dziukers/Star-Wars-App',
-        title:'Star Wars InstaSearch'
+        title:'Star Wars InstaSearch',
+        info:['ReactJS', 'Async/await', 'API', 'ES6', 'CSS animations', 'nodeJS', 'npm', 'RWD']
     },
         {
             id:2, 
@@ -24,7 +25,8 @@ import bggenerator from '../Images/bggenerator-min.jpg';
             technologies:['html','css','js', 'react'],
             linkPreview:'https://dziukers.github.io/Portfolio/',
             linkCode :'https://github.com/dziukers/Portfolio',
-            title:'Portfolio'
+            title:'Portfolio',
+            info:['ReactJS', 'styled components', 'React Router v4', 'React Transition Group v2','CSS animations', 'ES6', 'npm', 'RWD']
             },
             {
             id:3, 
@@ -34,7 +36,8 @@ import bggenerator from '../Images/bggenerator-min.jpg';
             technologies:['html','css','js'],
             linkPreview:'https://dziukers.github.io/Dragon-Ball-Radar/',
             linkCode :'https://github.com/dziukers/Dragon-Ball-Radar',
-            title:'Dragon Ball Radar Game'
+            title:'Dragon Ball Radar Game',
+            info:['JavaScript', 'CSS animation', 'Manipulating css with JavaScript']
         },
     {
         id:4 ,
@@ -44,7 +47,8 @@ import bggenerator from '../Images/bggenerator-min.jpg';
     technologies:['html','css'],
     linkPreview:'http://krainaindyka.pl',
     linkCode :'disabled',
-    title:'Kraina indyka'
+    title:'Kraina indyka',
+    info:['Manage FTP server', 'Manipulating SVG animation', 'Changing styles depending on current browser', 'RWD' ]
     },
     {
         id:5, 
@@ -54,7 +58,8 @@ import bggenerator from '../Images/bggenerator-min.jpg';
         technologies:['html','css','js'],
         linkPreview:'https://dziukers.github.io/Solar-system/',
         linkCode :'https://github.com/dziukers/Solar-system',
-        title:'Animated solar system '   
+        title:'Animated solar system ',
+        info:['Manipulating css with JavaScript', 'CSS animation', 'JavaScript Prototypes' ]
     },
     {
         id:6, 
@@ -64,7 +69,8 @@ import bggenerator from '../Images/bggenerator-min.jpg';
         technologies:['html','css','js'],
         linkPreview:'https://dziukers.github.io/Gradient-Background-Generator/',
         linkCode :'https://github.com/dziukers/Gradient-Background-Generator',
-        title:'Gradient Background Generator'    
+        title:'Gradient Background Generator',
+        info:['Manipulating css with JavaScript', 'CSS animation' ]
     }
     ];
 

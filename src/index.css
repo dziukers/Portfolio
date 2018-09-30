@@ -26,6 +26,7 @@ body {
 a,
 a:hover,
 a:active,
+a:focus,
 a:visited {
   text-decoration: none;
   color: inherit;

@@ -26,7 +26,8 @@ render() {
             technologies={card.technologies}
             linkPreview= {card.linkPreview}
             linkCode = {card.linkCode}
-            title = {card.title}>
+            title = {card.title}
+            info = {card.info}>
             </ProjectsCard>
 )}
             </ProjectsContainer>
