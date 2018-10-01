@@ -193,7 +193,7 @@ render () {
         align-items: center;
         border: double 6px rgba(${props => props.neonColor},.4);
         background-color: #343333;
-        
+        cursor:pointer;
         color: #bbb;
         transition: 0.3s ease;
     
