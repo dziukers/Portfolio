@@ -8,8 +8,8 @@ const About = () => {
         <AboutMeWrapper>
             <AboutMeInfoContainer>
                 <AboutMeImg src={ImgFace} alt='portrait on the wall' />
-                <span>{`My name is Krystian and I am looking for a job as a Front-End Developer. Actually, I learn a lot and gain experience every single day by making my own projects and trying out new solutions.\nI value creative approach keeping in mind best UI patterns using new technologies. That's why I find passion in creating stuff in React (like this SPA or`} 
-                    <a target='_blank' rel="noopener noreferrer" href='https://dziukers.github.io/Star-Wars-App/'> {`Star Wars App`}</a> {`).`}<p>In the near future I would like to learn about back-end technologies, like express.js and PostgreSQL and also Redux in order to build PWA's (Progressive Web Apps).</p>
+                <span>{`My name is Krystian and I am currently looking for a job as a Front-End Developer. Actually, I learn a lot and gain experience every single day by making my own projects and trying out new solutions.\nI value creative approach, keeping in mind best UI patterns using new technologies. That's why I find passion in creating stuff in React (like this SPA or`} 
+                    <a target='_blank' rel="noopener noreferrer" href='https://dziukers.github.io/Star-Wars-App/'> {`Star Wars App`}</a> {`).\nOf course, I don't want to limit myself, so I am also open to learning other technologies that could make me a better developer.`}<p>In the near future, I would like to learn about back-end technologies, like express.js and PostgreSQL and also Redux in order to build PWA's (Progressive Web Apps).</p><p></p>
                 </span>
             </AboutMeInfoContainer>
             <AboutMeFontelloIcons>
@@ -26,7 +26,7 @@ const About = () => {
 
 const AboutMeWrapper = styled.div`
     max-width: 1000px;
-    font-size: 1.3em;
+    font-size: 1.30em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

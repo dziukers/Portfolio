@@ -8,19 +8,15 @@ import LoadingScreen from 'react-loading-screen';
 
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+    state = {
       isLoading: true
-    };
-    this.handleLoad = this.handleLoad.bind(this);
   }
 
   componentDidMount() {
     window.addEventListener('load', this.handleLoad);
   }
 
-  handleLoad() {
+  handleLoad = () => {
     this.setState({
       isLoading:false
     })

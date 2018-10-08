@@ -15,22 +15,22 @@ render() {
     return (
         
         <ProjectsContainer>
-        {CardData.map(card =>
+            {CardData.map(card =>
 
-         <ProjectsCard
-            key={card.id} 
-            id={card.id} 
-            primaryColor={card.primaryColor}
-            neonColor= {card.neonColor} 
-            projectImg={card.projectImg} 
-            technologies={card.technologies}
-            linkPreview= {card.linkPreview}
-            linkCode = {card.linkCode}
-            title = {card.title}
-            info = {card.info}>
+            <ProjectsCard
+                key={card.id} 
+                id={card.id} 
+                primaryColor={card.primaryColor}
+                neonColor= {card.neonColor} 
+                projectImg={card.projectImg} 
+                technologies={card.technologies}
+                linkPreview= {card.linkPreview}
+                linkCode = {card.linkCode}
+                title = {card.title}
+                info = {card.info}>
             </ProjectsCard>
-)}
-            </ProjectsContainer>
+            )}
+        </ProjectsContainer>
     )
     }}
 
