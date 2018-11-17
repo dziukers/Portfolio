@@ -4,8 +4,9 @@ import bg from '../Images/bg-dots.png';
 import AnimateLoad from './AnimateLoad';
 
 class ProjectsCard extends Component{
-    state = {didMount: false,
-            showInfo: false
+    state = {
+        didMount: false,
+        showInfo: false
             }
         componentDidMount(){
            setTimeout(() => {
@@ -22,10 +23,13 @@ render () {
     const {title, info, primaryColor,neonColor, projectImg, technologies, linkPreview, linkCode} = this.props;
     const showIcon = technologies.map((technology, i) => {
         switch (technology) {
-            case 'html' : return <i key={i} className='icon-html5' title='HTML 5' />;
-            case 'css' : return <i key={i} className='icon-css3-1' title='CSS 3'/>;
+            case 'html' : return <i key={i} className='icon-html5' title='HTML5' />;
+            case 'css' : return <i key={i} className='icon-css3-1' title='CSS3'/>;
             case 'js' : return <i key={i} className='icon-javascript' title='JavaScript'/>;
-            case 'react' : return <i key={i} className='icon-react' title='ReactJS'/>;
+            case 'react' : return <i key={i} className='icon-react' title='React'/>;
+            case 'express' : return <i key={i} className='icon-express-original' title='Express.js'/>;
+            case 'postgresql' : return <i key={i} className='icon-postgresql-plain' title='PostgreSQL'/>;
+            case 'sass' : return <i key={i} className='icon-sass-original' title='Sass'/>;
             default: return null;
         }});
 
@@ -34,7 +38,7 @@ render () {
             <CardTitle> {title} </CardTitle>
             <ButtonInfo  onClick={this.ShowInfo}><i className='icon-info-circled-1'></i></ButtonInfo>
                 {this.state.showInfo? 
-                <CardInfo className='icon-info-circled' > What have I used/learned? {info.map(used => <p>{used}</p>)} </CardInfo> 
+                <CardInfo neonColor={neonColor} className='icon-info-circled' > Selected technologies and tools:<ul>{info.map((used, i) => <li key={i}>{used}</li>)}</ul> </CardInfo> 
                 : <a href={linkPreview} target='_blank'><CardImage src={projectImg} alt='project image' /></a>}
             <div>
                 <IconsBar>
@@ -63,8 +67,26 @@ render () {
     width:90%;
     height: calc(130px + 6em);
     align-self:center;
+    overflow-y: auto;
+    ::-webkit-scrollbar {
+    width: 12px;
+}
 
-    p{
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(${props => props.neonColor},.8); 
+}
+    ul{
+        padding:0;
+ 
+    }
+    li{
+        list-style:none;
         margin:0.2em;
         font-weight:100;
     }
@@ -76,6 +98,7 @@ render () {
     align-self:center;
     opacity:0.5;
     transition: 0.5s ease;
+    border-radius:5px;
     
     @media (max-width: 700px) {
         opacity:0.8;

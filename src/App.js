@@ -3,6 +3,9 @@ import Sound from './components/Sound';
 import Container from './components/Container'
 import Navbar from './components/Navbar';
 import Fog from './components/Fog';
+import Particles from 'react-particles-js';
+import particlesConfig from './particlesjs-config.json';
+import './index.css';
 
 import LoadingScreen from 'react-loading-screen';
 
@@ -33,6 +36,7 @@ class App extends Component {
         text='Just wait for it...'
       > 
         <React.Fragment>
+          <Particles className='particles' params={particlesConfig} />
           <Fog />
           <Navbar />
           <Container />

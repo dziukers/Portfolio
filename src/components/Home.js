@@ -2,11 +2,27 @@ import React, {Component} from 'react';
 import styled, { keyframes } from 'styled-components';
 
 
-const Home = () => {
+class Home extends Component {
+
+    constructor() {
+        super();
+        this.state={
+            broke:false
+        };
+    };
+    
+
+handleBroke = () => {
+    this.setState({
+      broke:true
+    });
+  }
+    render() {
+
         return (
-            <LogoWrapper>
-                <Logo>
-                    <LogoKrystianDziuk>Krystian Dziuk</LogoKrystianDziuk>
+            <LogoWrapper onClick={this.handleBroke}>
+                <Logo >
+                    <LogoKrystianDziuk >Krystian Dziu<span className={this.state.broke? 'broke-animation' : null}>k</span></LogoKrystianDziuk>
                     <LogoTextWrapper>
                         <LogoChangeTechnologyText />
                         <LogoDeveloper>Developer</LogoDeveloper>
@@ -14,6 +30,7 @@ const Home = () => {
                 </Logo>
             </LogoWrapper>
         )
+    }
     }
 
 
@@ -32,6 +49,36 @@ const blink = keyframes`
     43% { opacity: 1; }
     45% { opacity: 0.2; }
     46% { opacity: 1; }
+`;
+const broken = keyframes`
+    40% { opacity: 1; }
+    42% { opacity: 0.8}
+    43% { opacity: 1; }
+    45% { opacity: 0.2 }
+    46% { opacity: 1;}
+    96% { opacity: 1; color: white;
+        text-shadow:
+          0 0 0 transparent,
+          0 0 10px rgb(255,0,60),
+          0 0 20px rgba(255,0,60,.5),
+          0 0 40px rgba(255,0,60,1),
+          0 0 100px rgba(255,0,60,1),
+          0 0 200px rgba(255,0,60,1),
+          0 0 300px rgba(255,0,60,1),
+          0 0 500px rgba(255,0,60,1);}
+    97% { opacity: 1; text-shadow:none;color:gray}
+`;
+const detach = keyframes`
+0%{transform: rotate(5deg)}
+20%{transform: rotate(10deg)}
+30%{transform: rotate(20deg)}
+40%{transform: rotate(220deg)}
+50%{transform: rotate(140deg)}
+60%{transform: rotate(200deg)}
+70%{transform: rotate(160deg)}
+80%{transform: rotate(190deg)}
+90%{transform: rotate(170deg)}
+100%{transform: rotate(180deg)}
 `;
 const LogoWrapper = styled.div`
     height:60vh;
@@ -63,6 +110,7 @@ const LogoKrystianDziuk = styled.span`
         display: block;
         transform: rotate(-1deg);
         color: white;
+        cursor:pointer;
         text-shadow:
           0 0 0 transparent,
           0 0 10px rgb(255,0,60),
@@ -73,7 +121,15 @@ const LogoKrystianDziuk = styled.span`
           0 0 300px rgba(255,0,60,1),
           0 0 500px rgba(255,0,60,1);
         animation: ${blink} 4s infinite alternate;
-
+        span {
+            display:inline-block;
+            animation: ${broken} 3s infinite;
+            transform-origin:15% 74%;
+            transform:rotate(5deg);
+        }
+        .broke-animation {
+            animation:${broken} 3s infinite, ${detach} 5s 1 ease-out forwards;
+        }
         @media screen and (max-width: 700px) {
             text-shadow:
             0 0 0 transparent,

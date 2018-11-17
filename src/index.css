@@ -32,6 +32,16 @@ a:visited {
   color: inherit;
 }
 
+.particles {
+  position: fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  z-index: -1;
+  pointer-events: none;
+}
+
 @media screen and (max-width: 1400px) {
   body {
     font-size: 15px;
