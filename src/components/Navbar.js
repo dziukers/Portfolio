@@ -56,13 +56,13 @@ const Navigation = styled.nav`
     0 0 200px rgba(29, 167, 10,1),
     0 0 300px rgba(29, 167, 10,1),
     0 0 500px rgba(29, 167, 10,1),
-    0 0 1000px rgba(29, 167, 10,1);
+    0 10px 3px #000; 
+
       font-weight: 600;
       text-transform: uppercase;
   }   
 
   @media screen and (max-width: 1000px) {
-    position: fixed;
     width:100%;
     ul {
       display:flex;

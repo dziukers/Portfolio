@@ -1,27 +1,80 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import '../css/fontello.css';
 import styled from 'styled-components';
 import ImgFace from '../Images/face-min.png';
 
-const About = () => {
+class About extends Component {
+  state={more:false};
+
+  handleMore= () => {
+  this.setState({more: !this.state.more})
+  }
+
+  render() {
     return (
         <AboutMeWrapper>
+              {this.state.more? 
+              <div>
+              <p onClick={this.handleMore} className='back-button'> {`<--Back`} </p>
+              <AboutMeStackContainer>
+              <div>
+                <h1>Technologies</h1>
+                <ul>
+                  <li><i className='icon-html5-1'></i>HTML5</li>
+                  <li><i className='icon-css3-1'></i>CSS3</li>
+                  <li><i className='icon-sass-original'></i>Sass</li>
+                  <li><i className='icon-javascript'></i>JavaScript (ES6+)</li>
+                  <li><i className='icon-react'></i>React</li>
+                  <li><i className='icon-node'></i>NodeJS</li>
+                  <li><i className='icon-express-original'></i>ExpressJS</li>
+                  <li><i className='icon-postgresql-plain'></i>PostgreSQL</li>
+                </ul>
+              </div>
+              <div>
+                <h1>Tools</h1>
+                <ul>
+                <li><i className='icon-git-plain'></i>Git/GitHub</li>
+                  <li><i className='icon-npm'></i>npm</li>
+                  <li><i className='icon-visualstudio-plain'></i>Visual Studio Code</li>
+                  <li><i className='icon-heroku-original-wordmark'></i>Heroku</li>
+                  <li><i className='icon-knex'></i>Knex.js</li>
+                  <li><i className='icon-nodemon'></i>Nodemon</li>
+                  <li><i className='icon-bootstrap-plain'></i>Bootstrap</li>
+                  <li><i className='icon-wordpress-plain'></i>Wordpress</li>
+                </ul>
+              </div>
+              <div>
+                <h1>Other</h1>
+                <ul>
+                  <li>Responsive Design</li>
+                  <li>Performance optimization</li>
+                  <li>Security</li>
+                </ul>
+              </div>
+              </AboutMeStackContainer>
+              </div>
+              :
+              <Fragment>
             <AboutMeInfoContainer>
                 <AboutMeImg src={ImgFace} alt='portrait on the wall' />
                 <span>{`My name is Krystian and I am currently looking for a job as a Front-End Developer. Actually, I learn a lot and gain experience every single day by making my own projects and trying out new solutions.\nI value creative approach, keeping in mind best UI patterns using new technologies. That's why I find passion in creating stuff in React (like this SPA or`} 
-                    <a target='_blank' rel="noopener noreferrer" href='https://dziukers.github.io/Star-Wars-App/'> {`Star Wars App`}</a> {`).\nOf course, I don't want to limit myself, so I am also open to learning other technologies that could make me a better developer.`}<p>In the near future, I would like to learn about back-end technologies, like express.js and PostgreSQL and also Redux in order to build PWA's (Progressive Web Apps).</p><p></p>
+                    <a target='_blank' rel="noopener noreferrer" href='https://dziukers.github.io/Star-Wars-App/'> {`Star Wars App`}</a> {`).`}<p>I also have experience with back-end technologies such as Express.js and PostgreSQL. In the near future, I would like to build my first Progressive Web App and try out <a href='https://www.gatsbyjs.org'>GatsbyJS</a>.</p><p></p>
                 </span>
             </AboutMeInfoContainer>
+                <p onClick={this.handleMore} className='more-button'>{`Skills -->`}</p>
             <AboutMeFontelloIcons>
                 <i className='icon-html5-1'></i>
                 <i className='icon-css3-1'></i>
                 <i className='icon-javascript'></i>
                 <i className='icon-react'></i>
-                <i className='icon-npm'></i>
+                <i className='icon-sass-original'></i>
                 <i className='icon-node'></i>
             </AboutMeFontelloIcons>
+            </Fragment>
+            }
         </AboutMeWrapper>
     )
+  }
 }
 
 const AboutMeWrapper = styled.div`
@@ -38,7 +91,20 @@ const AboutMeWrapper = styled.div`
     max-height: 70vh;
     white-space: pre-wrap;
     
-
+    p.more-button{
+      text-align:right;
+      color:white;
+      text-shadow: 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+    font-size:1.3em;
+    cursor:pointer;
+    }
+    p.back-button {
+      text-align:left;
+      color:white;
+      text-shadow: 0 0 1em #4286f4, 0 0 0.5em #4286f4, 0 0 0.1em #4286f4, 0 10px 3px #000;
+    font-size:1.3em;
+    cursor:pointer;
+    }
     @media screen and (max-width: 1000px) {
     max-width: 90%;
     }
@@ -55,9 +121,42 @@ const AboutMeInfoContainer = styled.div`
     line-height: 1.375em;
     }
     span a {
-    color: rgb(100, 45, 45)
+    text-shadow: 0 0 5px cyan;
     }
     `;
+ const AboutMeStackContainer = styled.div `
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  @media (max-width:1024px) {
+    flex-flow:column wrap;
+  justify-content:center;
+  align-items:center;
+  }
+  div{
+    width:300px;
+    @media (max-width:1024px) {
+      margin:0 auto;
+    }
+  }
+    h1{
+      text-align:center;
+      color: #fee;
+      font-family: 'Vibur', cursive;
+      font-weight: normal;
+      text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+    }
+    ul{
+      padding:0;
+      li{
+        list-style:none;
+        i:before{
+          width:30px;
+         padding-right:1em;
+        }
+      }
+    }
+ `;
 
  const AboutMeImg = styled.img` 
  float:left;
@@ -71,7 +170,7 @@ const AboutMeInfoContainer = styled.div`
   display: block;
     }
  `;
-
+ 
 const AboutMeFontelloIcons = styled.div`
     clear: both;
     display:flex;
@@ -95,8 +194,7 @@ const AboutMeFontelloIcons = styled.div`
   0 0 100px rgba(203, 56, 55,1),
   0 0 200px rgba(203, 56, 55,1),
   0 0 300px rgba(203, 56, 55,1),
-  0 0 500px rgba(203, 56, 55,1),
-  0 0 1000px rgba(203, 56, 55,1);
+  0 0 500px rgba(203, 56, 55,1)
 } /* '' */
 i.icon-css3-1:hover:before,i.icon-css3:hover:before,i.icon-css3-2:hover:before {
   color:white;
@@ -108,8 +206,7 @@ i.icon-css3-1:hover:before,i.icon-css3:hover:before,i.icon-css3-2:hover:before {
   0 0 100px rgba(21, 114, 182,1),
   0 0 200px rgba(21, 114, 182,1),
   0 0 300px rgba(21, 114, 182,1),
-  0 0 500px rgba(21, 114, 182,1),
-  0 0 1000px rgba(21, 114, 182,1);
+  0 0 500px rgba(21, 114, 182,1)
 } /* '' */
 i.icon-javascript:hover:before {
   color:white;
@@ -121,8 +218,7 @@ i.icon-javascript:hover:before {
   0 0 100px rgba(247, 223, 30,1),
   0 0 200px rgba(247, 223, 30,1),
   0 0 300px rgba(247, 223, 30,1),
-  0 0 500px rgba(247, 223, 30,1),
-  0 0 1000px rgba(247, 223, 30,1);
+  0 0 500px rgba(247, 223, 30,1)
 } /* '' */
 i.icon-react:hover:before {
   color:white;
@@ -134,8 +230,7 @@ i.icon-react:hover:before {
   0 0 100px rgb(97, 218, 251),
   0 0 200px rgba(97, 218, 251,1),
   0 0 300px rgba(97, 218, 251,1),
-  0 0 500px rgba(97, 218, 251,1),
-  0 0 1000px rgba(97, 218, 251,1);
+  0 0 500px rgba(97, 218, 251,1)
 } /* '' */
 i.icon-node-dot-js:hover:before {
   color:white;
@@ -147,8 +242,7 @@ i.icon-node-dot-js:hover:before {
   0 0 100px rgba(51, 153, 51,1),
   0 0 200px rgba(51, 153, 51,1),
   0 0 300px rgba(51, 153, 51,1),
-  0 0 500px rgba(51, 153, 51,1),
-  0 0 1000px rgba(51, 153, 51,1);
+  0 0 500px rgba(51, 153, 51,1)
 } /* '' */
 i.icon-node:hover:before {
   color:white;
@@ -160,8 +254,7 @@ i.icon-node:hover:before {
   0 0 100px rgba(51, 153, 51,1),
   0 0 200px rgba(51, 153, 51,1),
   0 0 300px rgba(51, 153, 51,1),
-  0 0 500px rgba(51, 153, 51,1),
-  0 0 1000px rgba(51, 153, 51,1);
+  0 0 500px rgba(51, 153, 51,1)
 } /* '' */
 i.icon-html5:hover:before,i.icon-html5-1:hover:before {
   color:white;
@@ -173,8 +266,7 @@ i.icon-html5:hover:before,i.icon-html5-1:hover:before {
   0 0 100px rgba(227, 79, 38,1),
   0 0 200px rgba(227, 79, 38,1),
   0 0 300px rgba(227, 79, 38,1),
-  0 0 500px rgba(227, 79, 38,1),
-  0 0 1000px rgba(227, 79, 38,1);
+  0 0 500px rgba(227, 79, 38,1)
 } /* '' */
 i.icon-wordpress:hover:before {
   color:white;
@@ -186,8 +278,19 @@ i.icon-wordpress:hover:before {
   0 0 100px rgba(21, 114, 182,1),
   0 0 200px rgba(21, 114, 182,1),
   0 0 300px rgba(21, 114, 182,1),
-  0 0 500px rgba(21, 114, 182,1),
-  0 0 1000px rgba(21, 114, 182,1);
+  0 0 500px rgba(21, 114, 182,1)
+} /* '' */
+i.icon-sass-original:hover:before {
+  color:white;
+  text-shadow:
+  0 0 0 transparent,
+  0 0 10px rgb(204, 102, 153),
+  0 0 20px rgba(204, 102, 153,.5),
+  0 0 40px rgba(204, 102, 153,1),
+  0 0 100px rgba(204, 102, 153,1),
+  0 0 200px rgba(204, 102, 153,1),
+  0 0 300px rgba(204, 102, 153,1),
+  0 0 500px rgba(204, 102, 153,1)
 } /* '' */
 
     @media screen and (max-width: 700px) {

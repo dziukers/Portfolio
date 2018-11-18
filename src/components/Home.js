@@ -56,17 +56,9 @@ const broken = keyframes`
     43% { opacity: 1; }
     45% { opacity: 0.2 }
     46% { opacity: 1;}
-    96% { opacity: 1; color: white;
-        text-shadow:
-          0 0 0 transparent,
-          0 0 10px rgb(255,0,60),
-          0 0 20px rgba(255,0,60,.5),
-          0 0 40px rgba(255,0,60,1),
-          0 0 100px rgba(255,0,60,1),
-          0 0 200px rgba(255,0,60,1),
-          0 0 300px rgba(255,0,60,1),
-          0 0 500px rgba(255,0,60,1);}
-    97% { opacity: 1; text-shadow:none;color:gray}
+    75% { opacity: 1; color: white;
+        text-shadow:inherit}
+    76% { opacity: 1; text-shadow:none;color:gray}
 `;
 const detach = keyframes`
 0%{transform: rotate(5deg)}
@@ -77,8 +69,8 @@ const detach = keyframes`
 60%{transform: rotate(200deg)}
 70%{transform: rotate(160deg)}
 80%{transform: rotate(190deg)}
-90%{transform: rotate(170deg)}
-100%{transform: rotate(180deg)}
+90%{transform: rotate(170deg);}
+100%{transform: rotate(180deg);}
 `;
 const LogoWrapper = styled.div`
     height:60vh;
@@ -112,14 +104,15 @@ const LogoKrystianDziuk = styled.span`
         color: white;
         cursor:pointer;
         text-shadow:
-          0 0 0 transparent,
+        
           0 0 10px rgb(255,0,60),
           0 0 20px rgba(255,0,60,.5),
           0 0 40px rgba(255,0,60,1),
           0 0 100px rgba(255,0,60,1),
           0 0 200px rgba(255,0,60,1),
           0 0 300px rgba(255,0,60,1),
-          0 0 500px rgba(255,0,60,1);
+          0 0 500px rgba(255,0,60,1),0 10px 3px #000; 
+          /* text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em rgb(255,0,60), 0 0 0.5em rgb(255,0,60), 0 0 0.1em rgb(255,0,60), 0 10px 3px #000; */
         animation: ${blink} 4s infinite alternate;
         span {
             display:inline-block;
@@ -128,7 +121,7 @@ const LogoKrystianDziuk = styled.span`
             transform:rotate(5deg);
         }
         .broke-animation {
-            animation:${broken} 3s infinite, ${detach} 5s 1 ease-out forwards;
+            animation:${broken} 3s infinite,${detach} 5s 1 ease-out forwards;
         }
         @media screen and (max-width: 700px) {
             text-shadow:
@@ -152,7 +145,8 @@ const LogoTextWrapper = styled.span`
           0 0 40px rgba(38,149,255,1),
           0 0 100px rgba(38,149,255,1),
           0 0 200px rgba(38,149,255,1),
-          0 0 300px rgba(38,149,255,1);
+          0 0 300px rgba(38,149,255,1),
+          0 10px 3px #000;
         animation: ${buzz} 0.01s infinite alternate;
         white-space: normal;
 

@@ -65,7 +65,7 @@ render () {
     font-family: 'Nunito', sans-serif;
     font-weight:bold;    color:#bbb;
     width:90%;
-    height: calc(130px + 6em);
+    height: calc(130px + 6em + 6px);
     align-self:center;
     overflow-y: auto;
     ::-webkit-scrollbar {
@@ -99,6 +99,7 @@ render () {
     opacity:0.5;
     transition: 0.5s ease;
     border-radius:5px;
+    border:3px solid rgb(40,40,40,.5);
     
     @media (max-width: 700px) {
         opacity:0.8;
