@@ -32,8 +32,6 @@ class App extends Component {
         bgColor='#111111'
         spinnerColor='rgb(255,0,60)'
         textColor='#777'
-        logoSrc='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/250px-React-icon.svg.png'
-        text='Just wait for it...'
       > 
         <React.Fragment>
           <Particles className='particles' params={particlesConfig} />

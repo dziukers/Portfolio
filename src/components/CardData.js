@@ -71,7 +71,7 @@ const CardData = [
   },
   {
     id: 4,
-    primaryColor: "34, 34, 244",
+    primaryColor: "61, 106, 255",
     neonColor: "78, 100, 295",
     projectImg: imagerecognition,
     technologies: ["html", "css", "js", 'react', 'express', 'postgresql'],
@@ -146,7 +146,7 @@ const CardData = [
   },
   {
     id: 8,
-    primaryColor: "244, 244, 66",
+    primaryColor: "252, 246, 83",
     neonColor: "244, 255, 120",
     projectImg: tinyone,
     technologies: ["html", "css", "js", 'sass'],

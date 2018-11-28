@@ -76,7 +76,7 @@ const LogoWrapper = styled.div`
     height:60vh;
     display: flex;
     justify-content: center;
-      
+    user-select: none;  
     @media screen and (max-width: 700px) {
         height:70vh;
     }
@@ -116,12 +116,12 @@ const LogoKrystianDziuk = styled.span`
         animation: ${blink} 4s infinite alternate;
         span {
             display:inline-block;
-            animation: ${broken} 3s infinite;
+            /* animation: ${broken} 3s infinite; ADDITIONAL EFFECT */ 
             transform-origin:15% 74%;
             transform:rotate(5deg);
         }
         .broke-animation {
-            animation:${broken} 3s infinite,${detach} 5s 1 ease-out forwards;
+            animation:${detach} 5s 1 ease-out forwards;
         }
         @media screen and (max-width: 700px) {
             text-shadow:

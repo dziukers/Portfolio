@@ -15,7 +15,6 @@ class About extends Component {
         <AboutMeWrapper>
               {this.state.more? 
               <div>
-              <p onClick={this.handleMore} className='back-button'> {`<--Back`} </p>
               <AboutMeStackContainer>
               <div>
                 <h1>Technologies</h1>
@@ -52,6 +51,7 @@ class About extends Component {
                 </ul>
               </div>
               </AboutMeStackContainer>
+              <p onClick={this.handleMore} className='back-button'> {`<--Back`} </p>
               </div>
               :
               <Fragment>
@@ -144,7 +144,7 @@ const AboutMeInfoContainer = styled.div`
       color: #fee;
       font-family: 'Vibur', cursive;
       font-weight: normal;
-      text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+      text-shadow: 0 -20px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
     }
     ul{
       padding:0;
