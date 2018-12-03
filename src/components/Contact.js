@@ -11,7 +11,7 @@ const Contact = () => {
                 <hr></hr>
             </Text>
             <IconsBar>
-                <Icon iconcolor='rgb(255,255,0)' href='https://www.linkedin.com/in/krystian-dziuk-749b8615b/' target='_blank'>
+                <Icon iconcolor='rgb(255,255,0)' href='https://www.linkedin.com/in/krystiandziuk' target='_blank'>
                     <i className='icon-linkedin-1'></i>
                 </Icon>
                 <Icon href='https://github.com/dziukers' target='_blank'>

@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import '../css/fontello.css';
-import styled from 'styled-components';
+import styled ,{keyframes} from 'styled-components';
 import ImgFace from '../Images/face-min.png';
 
 class About extends Component {
@@ -16,8 +16,8 @@ class About extends Component {
               {this.state.more? 
               <div>
               <AboutMeStackContainer>
-              <div>
-                <h1>Technologies</h1>
+              <div className='tech'>
+                <h1 >Technologies</h1>
                 <ul>
                   <li><i className='icon-html5-1'></i>HTML5</li>
                   <li><i className='icon-css3-1'></i>CSS3</li>
@@ -29,8 +29,8 @@ class About extends Component {
                   <li><i className='icon-postgresql-plain'></i>PostgreSQL</li>
                 </ul>
               </div>
-              <div>
-                <h1>Tools</h1>
+              <div className='tools'>
+                <h1 >Tools</h1>
                 <ul>
                 <li><i className='icon-git-plain'></i>Git/GitHub</li>
                   <li><i className='icon-npm'></i>npm</li>
@@ -42,12 +42,13 @@ class About extends Component {
                   <li><i className='icon-wordpress-plain'></i>Wordpress</li>
                 </ul>
               </div>
-              <div>
-                <h1>Other</h1>
+              <div className='other'>
+                <h1 >Other</h1>
                 <ul>
-                  <li>Responsive Design</li>
+                  <li>Responsive Design Implementation</li>
                   <li>Performance optimization</li>
                   <li>Security</li>
+                  <li>Contributing to open source</li>
                 </ul>
               </div>
               </AboutMeStackContainer>
@@ -58,10 +59,10 @@ class About extends Component {
             <AboutMeInfoContainer>
                 <AboutMeImg src={ImgFace} alt='portrait on the wall' />
                 <span>{`My name is Krystian and I am currently looking for a job as a Front-End Developer. Actually, I learn a lot and gain experience every single day by making my own projects and trying out new solutions.\nI value creative approach, keeping in mind best UI patterns using new technologies. That's why I find passion in creating stuff in React (like this SPA or`} 
-                    <a target='_blank' rel="noopener noreferrer" href='https://dziukers.github.io/Star-Wars-App/'> {`Star Wars App`}</a> {`).`}<p>I also have experience with back-end technologies such as Express.js and PostgreSQL. In the near future, I would like to build my first Progressive Web App and try out <a href='https://www.gatsbyjs.org'>GatsbyJS</a>.</p><p></p>
+                    <a target='_blank' rel="noopener noreferrer" href='https://dziukers.github.io/Star-Wars-App/'> {`Star Wars App`}</a> {`).`}<p>I also have experience with back-end technologies such as Express.js and PostgreSQL. In the near future, I would like to build my first Progressive Web App and try out <a target='_blank' rel="noopener noreferrer" href='https://www.gatsbyjs.org'>GatsbyJS</a>.</p><p></p>
                 </span>
             </AboutMeInfoContainer>
-                <p onClick={this.handleMore} className='more-button'>{`Skills -->`}</p>
+                <p onClick={this.handleMore} className='more-button'>{`My skills -->`}</p>
             <AboutMeFontelloIcons>
                 <i className='icon-html5-1'></i>
                 <i className='icon-css3-1'></i>
@@ -77,6 +78,12 @@ class About extends Component {
   }
 }
 
+const turnon = keyframes `
+  100%{text-shadow: 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;color:#fee}
+`;
+const show = keyframes `
+  100%{opacity:1}
+`;
 const AboutMeWrapper = styled.div`
     max-width: 1000px;
     font-size: 1.30em;
@@ -134,28 +141,39 @@ const AboutMeInfoContainer = styled.div`
   align-items:center;
   }
   div{
-    width:300px;
+    width:250px;
     @media (max-width:1024px) {
       margin:0 auto;
     }
   }
     h1{
       text-align:center;
-      color: #fee;
+      color: gray;
       font-family: 'Vibur', cursive;
       font-weight: normal;
-      text-shadow: 0 -20px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
     }
     ul{
       padding:0;
+      list-style:none;
+
       li{
-        list-style:none;
+        text-align:left;
         i:before{
           width:30px;
          padding-right:1em;
         }
       }
     }
+    div.tech{h1{animation:${turnon} 0.2s 1 0.4s forwards};ul{opacity:0;animation:${show} 0.2s 1 0.4s forwards}}
+    div.tools{h1{animation:${turnon} 0.2s 1 0.7s forwards};ul{opacity:0;animation:${show} 0.2s 1 0.7s forwards}}
+    div.other{
+    h1{animation:${turnon} 0.2s 1 1s forwards};
+    ul{opacity:0;animation:${show} 0.2s 1 1s forwards;
+      li{
+          list-style-type: disc;
+        }
+        }}
+    
  `;
 
  const AboutMeImg = styled.img` 
