@@ -39,7 +39,7 @@ render () {
             <ButtonInfo  onClick={this.ShowInfo}><i className='icon-info-circled-1'></i></ButtonInfo>
                 {this.state.showInfo? 
                 <CardInfo neonColor={neonColor} className='icon-info-circled' > Selected technologies and tools:<ul>{info.map((used, i) => <li key={i}>{used}</li>)}</ul> </CardInfo> 
-                : <a href={linkPreview} target='_blank'><CardImage src={projectImg} alt='project image' /></a>}
+                : <a href={linkPreview} target='_blank' rel="noopener noreferrer"><CardImage src={projectImg} alt='project image' /></a>}
             <div>
                 <IconsBar>
                     {showIcon}
