@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import styled, {keyframes} from 'styled-components';
 import bg from '../Images/bg-dots.png';
 import cv from '../Images/CV-Krystian Dziuk.pdf';

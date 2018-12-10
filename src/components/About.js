@@ -59,7 +59,7 @@ class About extends Component {
             <AboutMeInfoContainer>
                 <AboutMeImg src={ImgFace} alt='portrait on the wall' />
                 <span>{`My name is Krystian and I am currently looking for a job as a Front-End Developer. Actually, I learn a lot and gain experience every single day by making my own projects and trying out new solutions.\nI value creative approach, keeping in mind best UI patterns using new technologies. That's why I find passion in creating stuff in React (like this SPA or`} 
-                    <a target='_blank' rel="noopener noreferrer" href='https://dziukers.github.io/Star-Wars-App/'> {`Star Wars App`}</a> {`).`}<p>I also have experience with back-end technologies such as Express.js and PostgreSQL. In the near future, I would like to build my first Progressive Web App and try out <a target='_blank' rel="noopener noreferrer" href='https://www.gatsbyjs.org'>GatsbyJS</a>.</p><p></p>
+                    <a target='_blank' rel="noopener noreferrer" href='https://dziukers.github.io/Star-Wars-App/'> {`Star Wars App`}</a> {`).`}<p>I also have experience with back-end technologies such as Express.js and PostgreSQL. In the near future, I would like to build my first Progressive Web App and try out <a target='_blank' rel="noopener noreferrer" href='https://www.gatsbyjs.org'>GatsbyJS</a> in order to build super fast websites.</p><p></p>
                 </span>
             </AboutMeInfoContainer>
                 <p onClick={this.handleMore} className='more-button'>{`My skills -->`}</p>
