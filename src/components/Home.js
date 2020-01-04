@@ -36,8 +36,9 @@ handleBroke = () => {
 
 const changetext = keyframes` 
     0%{content: 'Front-End'}
-    33%{content: 'React';}
-    66%{content: 'Web'}
+    25%{content: 'Angular';}
+    50%{content: 'React';}
+    75%{content: 'Web'}
 `;
 
 const buzz = keyframes` 

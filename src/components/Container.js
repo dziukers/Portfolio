@@ -4,6 +4,7 @@ import styled, {keyframes} from 'styled-components';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Home from './Home';
 import About from './About';
+import Skills from './Skills';
 import Projects from './Projects';
 import Contact from './Contact';
 
@@ -20,6 +21,7 @@ const Container = ({location}) => {
                         <Switch location={location}>
                             <Route exact path='/' component={Home} /> 
                             <Route path='/about' component={About} />
+                            <Route path='/skills' component={Skills} />
                             <Route path='/projects' component={Projects}/> 
                             <Route path='/contact' component={Contact} /> 
                         </Switch>
@@ -41,18 +43,16 @@ const hide = keyframes`
 		to{opacity:0;}
 	`;
   const Page = styled.section`
-
+  margin-bottom: 100px;
     div.page {
     position:absolute;
     left:0;
     right:0;
     }
 
-    div.z-index{
+    .z-index{
     z-index: 3;
     }
-    .fade-enter, .fade-exit {
-  }
   .fade-enter.fade-enter-active {
     animation: ${show} 300ms linear 600ms both;
   }

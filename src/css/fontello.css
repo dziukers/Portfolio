@@ -82,6 +82,12 @@
 .icon-postgresql-plain-wordmark:before { content: '\e81c'; } /* '' */
 .icon-sass-original:before { content: '\e81d'; } /* '' */
 .icon-visualstudio-plain:before { content: '\e81e'; } /* '' */
+.icon-jira:before { content: '\e826'; } /* '' */
+.icon-angular:before { content: '\e827'; } /* '' */
+.icon-rxjs:before { content: '\e828'; } /* '' */
+.icon-mapbox:before { content: '\e829'; } /* '' */
+.icon-typescript:before { content: '\e82a'; } /* '' */
+.icon-jira-1:before { content: '\e82b'; } /* '' */
 .icon-spin4:before { content: '\e834'; } /* '' */
 .icon-link-ext:before { content: '\f08e'; } /* '' */
 .icon-github-circled:before { content: '\f09b'; } /* '' */
@@ -90,3 +96,8 @@
 .icon-wordpress:before { content: '\f19a'; } /* '' */
 .icon-git-squared:before { content: '\f1d2'; } /* '' */
 .icon-git:before { content: '\f1d3'; } /* '' */
+.icon-home-1:before { content: '\e82c'; } /* '' */
+.icon-contact:before { content: '\e82d'; } /* '' */
+.icon-about:before { content: '\e82e'; } /* '' */
+.icon-skills:before { content: '\e82f'; } /* '' */
+.icon-projects:before { content: '\e830'; } /* '' */

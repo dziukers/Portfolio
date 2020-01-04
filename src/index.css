@@ -23,8 +23,9 @@ body {
   background-image:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(Images/bricks-min.jpg);
   background-size: cover;
   box-sizing: border-box;
-
+  position: relative;
 }
+
 html::-webkit-scrollbar {
   width: 12px;
   }  
@@ -56,6 +57,9 @@ a:visited {
   z-index: -1;
   pointer-events: none;
 }
+.fog-to-bottom {
+  z-index: 3;
+}
 
 @media screen and (max-width: 1400px) {
   body {
@@ -74,4 +78,3 @@ a:visited {
     font-size: 10px;
   }
 }
-

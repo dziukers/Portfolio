@@ -6,7 +6,9 @@ import cv from '../Images/CV-Krystian Dziuk.pdf';
 const Contact = () => {
     return (
         <ContactMeWrapper color='rgb(255,50,50)' bg={bg}>
-            <Text>{`I am currently open to new opportunities and actively seeking for a position as a Front-end Developer.\nFeel free to reach me out at`} 
+            <Text>
+                {/* I am currently open to new opportunities and actively seeking for a position as a Front-end Developer.\n */}
+                Feel free to reach me out at 
                 <a href='mailto:krystian.dziuk10@gmail.com'> krystian.dziuk.10@gmail.com</a>.
                 <hr></hr>
             </Text>
@@ -37,7 +39,7 @@ const makegray = keyframes`
     50% {filter:grayscale(100%)}
     65% {filter:grayscale(100%)}
     66% {filter:grayscale(0%)}
-  `;
+`;
 
 function blink (props) {
     return keyframes`    
@@ -53,9 +55,7 @@ function blink (props) {
  // key styles for elements
 const Text = styled.span``;
 const IconsBar = styled.div``;
-const Icon = styled.a`
-     
-`;
+const Icon = styled.a``;
     // Styled Contact Wrapper with styled nested elements
 const ContactMeWrapper = styled.div`
 margin:1em auto;
@@ -77,11 +77,10 @@ background-image:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(${props 
     margin:3em 1em;
     justify-content:space-between;
 
-  }
+}
     ${Text} {
     text-shadow: 0 1px 0 black;
     white-space:pre-wrap;
-
         a {
             text-shadow: none;
             color:transparent;
@@ -96,6 +95,7 @@ background-image:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(${props 
             border:1px solid white;
             width:80%;
             height:0;
+            margin-top:20px;
             box-shadow: 0 0 15px 2px ${props => props.color};
             animation: ${props => blink(props)} 5s infinite alternate;
         }

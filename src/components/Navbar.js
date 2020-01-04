@@ -1,18 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import HomeImg from '../Images/home.svg';
 
-const Navbar = () => {
+class Navbar extends Component {
+  render() {
+    const isMobile = window.innerWidth > 1000;
     return (
-            <Navigation>
-                <ul>
-                    <li><NavLink exact to='/'>Home</NavLink></li>
-                    <li><NavLink to='/about'>About</NavLink></li>
-                    <li><NavLink to='/projects'>Projects</NavLink></li>
-                    <li><NavLink to='/contact'>Contact</NavLink></li>
-                </ul>
-            </Navigation>
-    )
+      <Navigation>
+          <ul>
+              <li><NavLink exact to='/'>{isMobile ? 'Home' : <i className='icon-home'></i>}</NavLink></li>
+              <li><NavLink to='/about'>{isMobile ? 'About' : <i className='icon-about'></i>}</NavLink></li>
+              <li><NavLink to='/skills'>{isMobile ? 'Skills' : <i className='icon-skills'></i>}</NavLink></li>
+              <li><NavLink to='/projects'>{isMobile ? 'Projects' : <i className='icon-projects'></i>}</NavLink></li>
+              <li><NavLink to='/contact'>{isMobile ? 'Contact' : <i className='icon-contact'></i>}</NavLink></li>
+          </ul>
+      </Navigation>
+)
+  }
 }
 const Navigation = styled.nav`
     font-family: "neontubes";
@@ -22,9 +27,12 @@ const Navigation = styled.nav`
   
    ul {
     display:flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     list-style-type: none;
+    max-width:1200px;
+    width:100%;
+
   }
    a{
     color:grey;
@@ -36,8 +44,8 @@ const Navigation = styled.nav`
     ul li {
     font-size:2em;
     display: block;
-    padding:1em 2em 2em 2em;
-  
+    padding:1em 0 2em 0;
+    /* width:7em; */
   }
    ul li:hover a{
     cursor: pointer;
@@ -71,12 +79,12 @@ const Navigation = styled.nav`
       padding:0;
     }
     ul li{
-      padding:1em;
+      padding:0.5em;
     }
   }
   @media screen and (max-width: 700px) {
     ul {
-      font-size: 0.65em;
+      font-size: 0.85em;
     }
   } 
   `;
