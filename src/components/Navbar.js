@@ -42,7 +42,7 @@ const Navigation = styled.nav`
     align-items:center;
     font-size:1em; 
     span {
-      font-size:0.7em;
+      font-size:0.6em;
     }  
     }
   }
