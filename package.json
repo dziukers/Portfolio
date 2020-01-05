@@ -1,10 +1,10 @@
 {
-  "name": "neon",
-  "version": "0.2.0",
+  "name": "Portfolio",
+  "version": "0.3.0",
   "homepage": "https://dziukers.github.io/Portfolio",
   "private": true,
   "dependencies": {
-    "gh-pages": "^2.0.0",
+    "gh-pages": "^2.1.1",
     "howler": "^2.0.15",
     "i": "^0.3.6",
     "npm": "^6.4.1",

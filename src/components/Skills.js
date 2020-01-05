@@ -91,6 +91,7 @@ return keyframes`
         }
         div.tech{
             /* hr{animation:${turnon} 0.2s 1 0.4s forwards}; */
+            
         ul{opacity:0;animation:${show} 0.2s 1 0.4s forwards}}
         div.tools{
           /* hr{animation:${turnon} 0.2s 1 0.7s forwards}; */

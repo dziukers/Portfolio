@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import HomeImg from '../Images/home.svg';
 
 class Navbar extends Component {
   render() {
@@ -9,11 +8,11 @@ class Navbar extends Component {
     return (
       <Navigation>
           <ul>
-              <li><NavLink exact to='/'>{isMobile ? 'Home' : <i className='icon-home'></i>}</NavLink></li>
-              <li><NavLink to='/about'>{isMobile ? 'About' : <i className='icon-about'></i>}</NavLink></li>
-              <li><NavLink to='/skills'>{isMobile ? 'Skills' : <i className='icon-skills'></i>}</NavLink></li>
-              <li><NavLink to='/projects'>{isMobile ? 'Projects' : <i className='icon-projects'></i>}</NavLink></li>
-              <li><NavLink to='/contact'>{isMobile ? 'Contact' : <i className='icon-contact'></i>}</NavLink></li>
+              <li><NavLink exact to='/'>{isMobile ? 'Home' : <div className=""><i className='icon-home'></i><span>Home</span></div> }</NavLink></li>
+              <li><NavLink to='/about'>{isMobile ? 'About' : <div className=""><i className='icon-about'></i><span>About</span></div>}</NavLink></li>
+              <li><NavLink to='/skills'>{isMobile ? 'Skills' : <div className=""><i className='icon-skills'></i><span>Skills</span></div>}</NavLink></li>
+              <li><NavLink to='/projects'>{isMobile ? 'Projects' : <div className=""><i className='icon-projects'></i><span>Projects</span></div>}</NavLink></li>
+              <li><NavLink to='/contact'>{isMobile ? 'Contact' : <div className=""><i className='icon-contact'></i><span>Contact</span></div>}</NavLink></li>
           </ul>
       </Navigation>
 )
@@ -32,7 +31,21 @@ const Navigation = styled.nav`
     list-style-type: none;
     max-width:1200px;
     width:100%;
-
+    li {
+    font-size:2em;
+    display: block;
+    padding:1em 0 2em 0;
+     div{
+      display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    font-size:1em; 
+    span {
+      font-size:0.7em;
+    }  
+    }
+  }
   }
    a{
     color:grey;
@@ -41,20 +54,15 @@ const Navigation = styled.nav`
     text-decoration: none;
     text-decoration-style: none;
   }
-    ul li {
-    font-size:2em;
-    display: block;
-    padding:1em 0 2em 0;
-    /* width:7em; */
-  }
    ul li:hover a{
     cursor: pointer;
   }
   
-  a:focus,a.active{
+  a:focus{
     color:white;
   }
-  a.active{
+  a.active, a.active i::before{
+    color:white;
     text-shadow:
     0 0 0 transparent,
     0 0 10px rgb(29, 167, 10),

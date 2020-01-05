@@ -22,7 +22,7 @@ handleBroke = () => {
         return (
             <LogoWrapper onClick={this.handleBroke}>
                 <Logo >
-                    <LogoKrystianDziuk >Krystian Dziu<span className={this.state.broke? 'broke-animation' : null}>k</span></LogoKrystianDziuk>
+                    <LogoKrystianDziuk >Krysti<span className={this.state.broke? 'broke-animation' : null}>a</span>n Dziuk</LogoKrystianDziuk>
                     <LogoTextWrapper>
                         <LogoChangeTechnologyText />
                         <LogoDeveloper>Developer</LogoDeveloper>
@@ -67,11 +67,11 @@ const detach = keyframes`
 30%{transform: rotate(20deg)}
 40%{transform: rotate(220deg)}
 50%{transform: rotate(140deg)}
-60%{transform: rotate(200deg)}
-70%{transform: rotate(160deg)}
-80%{transform: rotate(190deg)}
-90%{transform: rotate(170deg);}
-100%{transform: rotate(180deg);}
+60%{transform: rotate(190deg)}
+70%{transform: rotate(150deg)}
+80%{transform: rotate(180deg)}
+90%{transform: rotate(160deg)}
+100%{transform: rotate(170deg)}
 `;
 const LogoWrapper = styled.div`
     height:60vh;
@@ -112,7 +112,7 @@ const LogoKrystianDziuk = styled.span`
           0 0 100px rgba(255,0,60,1),
           0 0 200px rgba(255,0,60,1),
           0 0 300px rgba(255,0,60,1),
-          0 0 500px rgba(255,0,60,1),0 10px 3px #000; 
+          0 0 500px rgba(255,0,60,1),0 15px 3px #000; 
           /* text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em rgb(255,0,60), 0 0 0.5em rgb(255,0,60), 0 0 0.1em rgb(255,0,60), 0 10px 3px #000; */
         animation: ${blink} 4s infinite alternate;
         span {
@@ -165,7 +165,7 @@ const LogoChangeTechnologyText = styled.span`
         margin: 0 0.8em 0 0;
         display:block;
         content:'Front-End';
-        animation: ${changetext} 10s linear infinite;
+        animation: ${changetext} 10s ease-in infinite;
         }
 `;
 const LogoDeveloper = styled.span`
