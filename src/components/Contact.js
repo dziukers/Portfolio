@@ -9,7 +9,7 @@ const Contact = () => {
             <Text>
                 {/* I am currently open to new opportunities and actively seeking for a position as a Front-end Developer.\n */}
                 Feel free to reach me out at 
-                <a href='mailto:krystian.dziuk10@gmail.com'> krystian.dziuk.10@gmail.com</a>.
+                <a href='mailto:krystian.dziuk.dev@gmail.com'> krystian.dziuk.dev@gmail.com</a>
                 <hr></hr>
             </Text>
             <IconsBar>
@@ -19,7 +19,7 @@ const Contact = () => {
                 <Icon href='https://github.com/dziukers' target='_blank'>
                     <i className='icon-github-circled'></i>
                 </Icon>
-                <Icon href='mailto:krystian.dziuk10@gmail.com' target='_blank'>
+                <Icon href='mailto:krystian.dziuk.dev@gmail.com' target='_blank'>
                     <i className='icon-email'></i>
                 </Icon>
                 <Icon href={cv} target='_blank'>
