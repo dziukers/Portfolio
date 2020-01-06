@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/Portfolio/static/media/dragonball-min.b093b5a2.jpg"
   },
   {
-    "revision": "8f675b8da40cd8923ca0",
+    "revision": "12919b66ad3f8ec9be3f",
     "url": "/Portfolio/static/css/main.585f9a5f.chunk.css"
   },
   {
@@ -48,8 +48,8 @@ self.__precacheManifest = [
     "url": "/Portfolio/static/media/solarsystem-min.62241e63.jpg"
   },
   {
-    "revision": "8f675b8da40cd8923ca0",
-    "url": "/Portfolio/static/js/main.8f675b8d.chunk.js"
+    "revision": "12919b66ad3f8ec9be3f",
+    "url": "/Portfolio/static/js/main.12919b66.chunk.js"
   },
   {
     "revision": "046020e24ca2403bdc57ef9041d5c3c7",
@@ -68,20 +68,12 @@ self.__precacheManifest = [
     "url": "/Portfolio/static/media/codingchallenge11.5e33bfe4.JPG"
   },
   {
-    "revision": "75956afdbc75d7deecdc2274acbf93e1",
-    "url": "/Portfolio/static/media/CV-Krystian Dziuk.75956afd.pdf"
+    "revision": "c0d8da8be8756ee8dd578d593b18bc7b",
+    "url": "/Portfolio/static/media/CV-Krystian Dziuk.c0d8da8b.pdf"
   },
   {
     "revision": "f65c4e33b7972cdc648f19bdf7c27014",
     "url": "/Portfolio/static/media/fog-horizontal.f65c4e33.png"
-  },
-  {
-    "revision": "0783efc36151c26e18fd454776ef164c",
-    "url": "/Portfolio/static/media/fontello.0783efc3.woff2"
-  },
-  {
-    "revision": "b55bb562317a3622958511e1f1972de9",
-    "url": "/Portfolio/static/media/fontello.b55bb562.woff"
   },
   {
     "revision": "873ab57ef073b5ac9d402139287f7889",
@@ -92,11 +84,19 @@ self.__precacheManifest = [
     "url": "/Portfolio/static/media/fontello.d68f4581.ttf"
   },
   {
+    "revision": "0783efc36151c26e18fd454776ef164c",
+    "url": "/Portfolio/static/media/fontello.0783efc3.woff2"
+  },
+  {
+    "revision": "b55bb562317a3622958511e1f1972de9",
+    "url": "/Portfolio/static/media/fontello.b55bb562.woff"
+  },
+  {
     "revision": "ad4026c9506cb98a8319",
     "url": "/Portfolio/static/css/1.ee7bc395.chunk.css"
   },
   {
-    "revision": "6fd0972f42348d7cd345c159efe6ac94",
+    "revision": "0edc6771c4a0f29c50e604b1321a0017",
     "url": "/Portfolio/index.html"
   }
 ];

@@ -1,7 +1,7 @@
 {
   "main.css": "/Portfolio/static/css/main.585f9a5f.chunk.css",
-  "main.js": "/Portfolio/static/js/main.8f675b8d.chunk.js",
-  "main.js.map": "/Portfolio/static/js/main.8f675b8d.chunk.js.map",
+  "main.js": "/Portfolio/static/js/main.12919b66.chunk.js",
+  "main.js.map": "/Portfolio/static/js/main.12919b66.chunk.js.map",
   "static/css/1.ee7bc395.chunk.css": "/Portfolio/static/css/1.ee7bc395.chunk.css",
   "static/js/1.ad4026c9.chunk.js": "/Portfolio/static/js/1.ad4026c9.chunk.js",
   "static/js/1.ad4026c9.chunk.js.map": "/Portfolio/static/js/1.ad4026c9.chunk.js.map",
@@ -19,11 +19,11 @@
   "static/media/imagerecognition.JPG": "/Portfolio/static/media/imagerecognition.943e3f27.JPG",
   "static/media/tinyone.JPG": "/Portfolio/static/media/tinyone.490d4fb5.JPG",
   "static/media/codingchallenge11.JPG": "/Portfolio/static/media/codingchallenge11.5e33bfe4.JPG",
-  "static/media/CV-Krystian Dziuk.pdf": "/Portfolio/static/media/CV-Krystian Dziuk.75956afd.pdf",
+  "static/media/CV-Krystian Dziuk.pdf": "/Portfolio/static/media/CV-Krystian Dziuk.c0d8da8b.pdf",
   "static/media/fog-horizontal.png": "/Portfolio/static/media/fog-horizontal.f65c4e33.png",
-  "static/css/1.ee7bc395.chunk.css.map": "/Portfolio/static/css/1.ee7bc395.chunk.css.map",
   "static/css/main.585f9a5f.chunk.css.map": "/Portfolio/static/css/main.585f9a5f.chunk.css.map",
+  "static/css/1.ee7bc395.chunk.css.map": "/Portfolio/static/css/1.ee7bc395.chunk.css.map",
   "index.html": "/Portfolio/index.html",
-  "precache-manifest.f731c9d412f9bd08aeffff1a489c1fd0.js": "/Portfolio/precache-manifest.f731c9d412f9bd08aeffff1a489c1fd0.js",
+  "precache-manifest.70f6c9dca635a22ae2b9e61bafc907df.js": "/Portfolio/precache-manifest.70f6c9dca635a22ae2b9e61bafc907df.js",
   "service-worker.js": "/Portfolio/service-worker.js"
 }
